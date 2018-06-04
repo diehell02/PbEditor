@@ -1,0 +1,32 @@
+﻿<Window x:Class="PbEditor.SelectProto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PbEditor"
+        mc:Ignorable="d"
+        Title="SelectProto" Height="600" Width="600" FontSize="16">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="15">proto</TextBlock>
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="15" Name="ProtoFileTextBox"></TextBox>
+        <Button Grid.Row="0" Grid.Column="2" Margin="15" Name="BrowseProtoButton" Click="BrowseProtoButton_Click">browse</Button>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="15">import</TextBlock>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="15" Name="ImportPathTextBox"></TextBox>
+        <Button Grid.Row="1" Grid.Column="2" Margin="15" Name="BrowseImportButton" Click="BrowseImportButton_Click">browse</Button>
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="15">Message</TextBlock>
+        <ComboBox Grid.Row="2" Grid.Column="1" Margin="15" Name="MessagesComboBox"></ComboBox>
+        <Button Grid.Row="2" Grid.Column="2" Margin="15" Name="ConfirmButton" Click="ConfirmButton_Click">confirm</Button>
+        <TextBlock Grid.Row="3" Grid.ColumnSpan="3"></TextBlock>
+    </Grid>
+</Window>

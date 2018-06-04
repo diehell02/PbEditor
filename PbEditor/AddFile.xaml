@@ -1,0 +1,44 @@
+﻿<Window x:Class="PbEditor.AddFile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PbEditor"
+        mc:Ignorable="d"
+        Title="AddFile" Height="600" Width="900" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel>
+            <StackPanel Height="40" DockPanel.Dock="Top" Orientation="Horizontal">
+                <Button Margin="5" MinWidth="65" Name="AddFilesButton" Click="AddFilesButton_Click">Add Files</Button>
+                <Button Margin="5" MinWidth="65" Name="ClearButton" Click="ClearButton_Click">Clear</Button>
+            </StackPanel>
+            <ListView Name="FileListView" DockPanel.Dock="Bottom" AllowDrop="True" Drop="ListView_Drop" MouseDoubleClick="FileListView_MouseDoubleClick">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="FileName" Width="200">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Path=FileName}"></TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Extension" Width="100">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Path=Extension}"></TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Path" Width="500">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Path=Path}"></TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </DockPanel>
+    </Grid>
+</Window>
